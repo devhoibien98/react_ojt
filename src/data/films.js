@@ -1,0 +1,98 @@
+const films = [
+  {
+    id: "1",
+    name: "Mắt Biếc",
+    rating: 4.7,
+    isSpecial: true,
+    image:
+      "https://imagev3.vietnamplus.vn/w1000/Uploaded/2024/fsmsy/2019_12_25/mat_biec.jpg.webp",
+    origin: "Vietnam",
+    category: "Romance",
+  },
+  {
+    id: "2",
+    name: "Hai Phượng",
+    rating: 4.5,
+    isSpecial: true,
+    image:
+      "https://upload.wikimedia.org/wikipedia/vi/4/41/Hai_Phuong_-_Furie_poster.jpg",
+    origin: "Vietnam",
+    category: "Action",
+  },
+  {
+    id: "3",
+    name: "Tiệc Trăng Máu",
+    rating: 4.6,
+    isSpecial: false,
+    image:
+      "https://images.fptplay.net/media/OTT/VOD/2024/06/25/tiec-trang-mau-fpt-play-1719288718635_Landscape.jpg",
+    origin: "Vietnam",
+    category: "Drama",
+  },
+  {
+    id: "4",
+    name: "Em Là Bà Nội Của Anh",
+    rating: 4.4,
+    isSpecial: false,
+    image:
+      "https://cdn-i.vtcnews.vn/files/f1/2016/02/22/20151208105342em_lajpg.jpg",
+    origin: "Vietnam",
+    category: "Comedy",
+  },
+  {
+    id: "5",
+    name: "Lật Mặt: 48H",
+    rating: 4.3,
+    isSpecial: true,
+    image: "https://i.ytimg.com/vi/ykBfss-8H4Y/maxresdefault.jpg",
+    origin: "Vietnam",
+    category: "Action",
+  },
+  {
+    id: "6",
+    name: "Chị Mười Ba",
+    rating: 4.2,
+    isSpecial: false,
+    image: "https://i.ytimg.com/vi/4icB4gSPaFY/maxresdefault.jpg",
+    origin: "Vietnam",
+    category: "Crime",
+  },
+  {
+    id: "7",
+    name: "Cua Lại Vợ Bầu",
+    rating: 4.5,
+    isSpecial: true,
+    image: "https://i.ytimg.com/vi/l8vTMxuvz6Y/maxresdefault.jpg",
+    origin: "Vietnam",
+    category: "Romantic Comedy",
+  },
+  {
+    id: "8",
+    name: "Bố Già",
+    rating: 4.8,
+    isSpecial: true,
+    image: "https://i.ytimg.com/vi/PDp4Ic8ZGUM/maxresdefault.jpg",
+    origin: "Vietnam",
+    category: "Drama",
+  },
+  {
+    id: "9",
+    name: "Song Lang",
+    rating: 4.7,
+    isSpecial: false,
+    image:
+      "https://static2.vieon.vn/vieplay-image/carousel_web_v4/2023/02/08/emfbip4e_1920x1080-songlang1_1920_1080.jpeg",
+    origin: "Vietnam",
+    category: "Drama",
+  },
+  {
+    id: "10",
+    name: "Đôi Mắt Âm Dương",
+    rating: 4.1,
+    isSpecial: false,
+    image: "https://i.ytimg.com/vi/J_xN8O0Ag5U/maxresdefault.jpg",
+    origin: "Vietnam",
+    category: "Horror",
+  },
+];
+export default films;

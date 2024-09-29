@@ -1,11 +1,8 @@
-import React from "react";
 import { Card, Badge } from "react-bootstrap";
 import { StarFill, StarHalf, Star } from "react-bootstrap-icons";
 
-const OrchidCard = ({ orchid }) => {
-  const { name, image, origin, color, isSpecial, rating, category } = orchid;
-
-  // Function to render rating stars based on the rating value
+const FilmCard = ({ film }) => {
+  const { name, image, origin, category, rating, isSpecial } = film;
   const renderRatingStars = (rating) => {
     return Array.from({ length: 5 }, (_, i) => {
       const starIndex = i + 1;
@@ -18,7 +15,6 @@ const OrchidCard = ({ orchid }) => {
       }
     });
   };
-
   return (
     <Card className="h-100">
       {/* Orchid image */}
@@ -43,17 +39,14 @@ const OrchidCard = ({ orchid }) => {
         <Card.Text>
           <strong>Origin:</strong> {origin}
           <br />
-          <strong>Color:</strong> {color}
-          <br />
           <strong>Category:</strong> {category}
           <br />
-          <strong>Rating:</strong> {renderRatingStars(rating)}
         </Card.Text>
 
         {/* Special Orchid badge */}
         {isSpecial && (
           <Badge bg="danger" className=" mb-2 text-center p-3">
-            Special Orchid
+            Special Film
           </Badge>
         )}
       </Card.Body>
@@ -61,4 +54,4 @@ const OrchidCard = ({ orchid }) => {
   );
 };
 
-export default OrchidCard;
+export default FilmCard;
