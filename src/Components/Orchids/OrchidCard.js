@@ -6,18 +6,18 @@ const OrchidCard = ({ orchid }) => {
   const { name, image, origin, color, isSpecial, rating, category } = orchid;
 
   // Function to render rating stars based on the rating value
-  const renderRatingStars = (rating) => {
-    return Array.from({ length: 5 }, (_, i) => {
-      const starIndex = i + 1;
-      if (starIndex <= rating) {
-        return <StarFill key={starIndex} className="text-warning" />;
-      } else if (starIndex - 0.5 <= rating) {
-        return <StarHalf key={starIndex} className="text-warning" />;
-      } else {
-        return <Star key={starIndex} className="text-warning" />;
-      }
-    });
-  };
+  // const renderRatingStars = (rating) => {
+  //   return Array.from({ length: 5 }, (_, i) => {
+  //     const starIndex = i + 1;
+  //     if (starIndex <= rating) {
+  //       return <StarFill key={starIndex} className="text-warning" />;
+  //     } else if (starIndex - 0.5 <= rating) {
+  //       return <StarHalf key={starIndex} className="text-warning" />;
+  //     } else {
+  //       return <Star key={starIndex} className="text-warning" />;
+  //     }
+  //   });
+  // };
 
   return (
     <Card className="h-100">
@@ -47,7 +47,8 @@ const OrchidCard = ({ orchid }) => {
           <br />
           <strong>Category:</strong> {category}
           <br />
-          <strong>Rating:</strong> {renderRatingStars(rating)}
+          {/* <strong>Rating:</strong> {renderRatingStars(rating)} */}
+          <strong>Rating:</strong> {rating} ⭐
         </Card.Text>
 
         {/* Special Orchid badge */}
