@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import orchids from "../../data/orchids";
+import orchids from "../../data/ListOfOrchids";
 import OrchidCard from "./OrchidCard";
 
 const Orchids = () => {

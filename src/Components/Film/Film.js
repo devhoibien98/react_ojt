@@ -1,6 +1,6 @@
-import films from "../../data/films";
 import { Container, Row, Col } from "react-bootstrap";
 import FilmCard from "./FilmCard";
+import films from "../../data/ListOfFilms";
 const Film = () => {
   return (
     <Container fluid>
