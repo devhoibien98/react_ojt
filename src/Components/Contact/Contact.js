@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <Container className="mt-4">
       <h2>Contact Information</h2>
-      <Row>
+      <Row sm={1} md={2}>
         <Col md={8}>
           <Card className="mb-6 pb-4">
             <Card.Body>
