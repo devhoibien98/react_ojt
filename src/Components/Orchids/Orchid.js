@@ -1,7 +1,8 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Badge } from "react-bootstrap";
 import orchids from "../../data/ListOfOrchids";
 import OrchidCard from "./OrchidCard";
+import { Link } from "react-router-dom";
 
 const Orchids = () => {
   return (
@@ -13,6 +14,12 @@ const Orchids = () => {
           </Col>
         ))}
       </Row>
+      <br></br>
+      <Badge bg="danger" className=" mb-2 text-center p-3 ">
+        <Link to="/film" className="text-decoration-none text-white ">
+          Film
+        </Link>
+      </Badge>
     </Container>
   );
 };

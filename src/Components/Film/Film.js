@@ -1,6 +1,7 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Badge } from "react-bootstrap";
 import FilmCard from "./FilmCard";
 import films from "../../data/ListOfFilms";
+import { Link } from "react-router-dom";
 const Film = () => {
   return (
     <Container fluid>
@@ -11,6 +12,12 @@ const Film = () => {
           </Col>
         ))}
       </Row>
+      <br></br>
+      <Badge bg="danger" className=" mb-2 text-center p-3 ">
+        <Link to="/orchid" className="text-decoration-none text-white ">
+          Orchid
+        </Link>
+      </Badge>
     </Container>
   );
 };

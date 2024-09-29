@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -7,12 +7,31 @@ const Home = () => {
     <Container className="mt-4">
       <h1>Welcome to My App</h1>
       <h3>Explore the following sections:</h3>
-      <ul style={{ listStyle: "none" }}>
+      <ul
+        style={{ listStyle: "none" }}
+        className="d-flex justify-content-around"
+      >
         <li>
-          <Link to="/orchid">Orchids</Link>
+          <Link to="/orchid" className="text-decoration-none text-white">
+            <Button
+              variant="primary"
+              type="submit"
+              style={{ marginTop: "20px" }}
+            >
+              Orchid
+            </Button>
+          </Link>
         </li>
         <li>
-          <Link to="/film">Film</Link>
+          <Link to="/film">
+            <Button
+              variant="primary"
+              type="submit"
+              style={{ marginTop: "20px" }}
+            >
+              Film
+            </Button>
+          </Link>
         </li>
       </ul>
     </Container>

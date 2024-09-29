@@ -45,24 +45,18 @@ const Contact = () => {
             <Card.Body>
               <Card.Title>Contact Form</Card.Title>
               <Form>
-                <Form.Group controlId="formBasicName">
-                  <Form.Label>Name</Form.Label>
-                  <Form.Control type="text" placeholder="Enter your name" />
-                </Form.Group>
+                <Form.Label>Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter your name" />
 
-                <Form.Group controlId="formBasicEmail">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="Enter your email" />
-                </Form.Group>
+                <Form.Label>Email</Form.Label>
+                <Form.Control type="email" placeholder="Enter your email" />
 
-                <Form.Group controlId="formBasicMessage">
-                  <Form.Label>Message</Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    rows={3}
-                    placeholder="Your message"
-                  />
-                </Form.Group>
+                <Form.Label>Message</Form.Label>
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  placeholder="Your message"
+                />
 
                 <Button
                   variant="primary"
