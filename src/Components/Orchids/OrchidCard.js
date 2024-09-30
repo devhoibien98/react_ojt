@@ -11,7 +11,7 @@ const OrchidCard = ({ orchid }) => {
         src={image}
         alt={name}
         style={{
-          height: "150px",
+          height: "400px",
           width: "100%",
           objectFit: "cover",
           objectPosition: "center",

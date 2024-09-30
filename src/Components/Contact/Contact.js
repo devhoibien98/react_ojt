@@ -30,7 +30,7 @@ const Contact = () => {
                 out!
               </Card.Text>
               <Card.Text>
-                <strong>Email:</strong> fptuniversity@example.com
+                <strong>Email:</strong> fptuniversity@fpt.vn
                 <br />
                 <strong>Phone:</strong> (123) 456-7890
                 <br />

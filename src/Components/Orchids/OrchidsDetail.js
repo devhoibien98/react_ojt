@@ -9,7 +9,9 @@ const OrchidsDetail = () => {
   const orchid = orchids.find((orchid) => orchid.id === id);
 
   if (!orchid) {
-    return <h1>Orchid Not Found</h1>;
+    return (
+      <h1 className="text-danger text-center fw-bold">Orchid Not Found</h1>
+    );
   }
   return (
     <Card className="h-100">
@@ -17,7 +19,7 @@ const OrchidsDetail = () => {
         src={orchid.image}
         alt={orchid.name}
         style={{
-          height: "150px",
+          height: "400px",
           width: "100%",
           objectFit: "cover",
           objectPosition: "center",
