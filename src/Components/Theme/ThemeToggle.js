@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Container } from "react-bootstrap";
 
 const ThemeToggle = ({ toggleTheme }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -7,9 +8,11 @@ const ThemeToggle = ({ toggleTheme }) => {
     toggleTheme();
   };
   return (
-    <button onClick={handleToggle}>
-      {isDarkMode ? "Light Mode" : "Dark Mode"}
-    </button>
+    <Container>
+      <button onClick={handleToggle}>
+        {isDarkMode ? "Light Mode" : "Dark Mode"}
+      </button>
+    </Container>
   );
 };
 

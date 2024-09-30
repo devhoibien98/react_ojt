@@ -28,7 +28,7 @@ const OrchidsDetail = () => {
         }}
       />
 
-      <Card.Body className="d-flex flex-column">
+      <Card.Body className="d-flex flex-column text-center">
         <Card.Title>{orchid.name}</Card.Title>
 
         <Card.Text>
