@@ -22,17 +22,6 @@ const Home = () => {
             </Button>
           </Link>
         </li>
-        <li>
-          <Link to="/film">
-            <Button
-              variant="primary"
-              type="submit"
-              style={{ marginTop: "20px" }}
-            >
-              Film
-            </Button>
-          </Link>
-        </li>
       </ul>
     </Container>
   );

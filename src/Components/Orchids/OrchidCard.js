@@ -3,34 +3,33 @@ import { Card, Badge, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const OrchidCard = ({ orchid }) => {
-  const { name, image, origin, color, isSpecial, rating, category } = orchid;
+  const { orchidName, image, category, description, isNatural, isAttractive } =
+    orchid;
 
   return (
-    <Card className="h-100">
+    <Card className="h-100 orchid-card">
       <Card.Img
         src={image}
-        alt={name}
+        alt={orchidName}
         style={{
-          height: "400px",
+          height: "250px",
           width: "100%",
           objectFit: "cover",
           objectPosition: "center",
-          maxWidth: "300px",
+          maxWidth: "400px",
           margin: "0 auto",
         }}
       />
-
       <Card.Body className="d-flex flex-column">
-        <Card.Title>{name}</Card.Title>
-
+        <Card.Title>{orchidName}</Card.Title>
         <Card.Text>
-          <strong>Origin:</strong> {origin}
-          <br />
-          <strong>Color:</strong> {color}
-          <br />
           <strong>Category:</strong> {category}
           <br />
-          <strong>Rating:</strong> {rating} ⭐
+          <strong>Description:</strong> {description.slice(0, 100)}...
+          <br />
+          <strong>Natural:</strong> {isNatural ? "Yes" : "No"}
+          <br />
+          <strong>Attractive:</strong> {isAttractive ? "Yes" : "No"}
         </Card.Text>
         <Link
           to={`/orchid/${orchid.id}`}
@@ -40,9 +39,14 @@ const OrchidCard = ({ orchid }) => {
             View Orchid
           </Button>
         </Link>
-        {isSpecial && (
-          <Badge bg="danger" className=" mb-2 text-center p-3">
-            Special Orchid
+        {isNatural && (
+          <Badge bg="success" className="mb-2 text-center p-2">
+            Natural Orchid
+          </Badge>
+        )}
+        {isAttractive && (
+          <Badge bg="warning" className="mt-2 text-center p-2">
+            Attractive Orchid
           </Badge>
         )}
       </Card.Body>

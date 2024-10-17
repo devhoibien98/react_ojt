@@ -36,3 +36,70 @@
     transform: rotate(360deg);
   }
 }
+.orchid-card {
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+/*  */
+.modal-content {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .modal-content {
+    max-width: 800px;
+  }
+}
+
+.form-control {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.2s;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.checkbox-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+/* 
+ */
+/* Footer CSS */
+footer {
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa; /* Màu nền tùy chỉnh */
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none; /* Loại bỏ gạch dưới */
+  color: inherit; /* Đổi màu link theo màu chữ mặc định */
+  margin: 0 10px; /* Khoảng cách giữa các link */
+}
+
+footer a:hover {
+  color: #007bff; /* Màu khi di chuột */
+}

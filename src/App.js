@@ -9,6 +9,9 @@ import OrchidsDetail from "./Components/Orchids/OrchidsDetail";
 import UseTheme from "./Components/Theme/UseTheme";
 import { ThemeProvider } from "react-bootstrap";
 import ThemeToggle from "./Components/Theme/ThemeToggle";
+import Footer from "./Components/Footer/Footer";
+import Natural from "./Natural/Natural";
+import About from "./Components/About/About";
 
 function App() {
   const [theme, toggleTheme] = UseTheme();
@@ -30,9 +33,11 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/orchid" element={<Orchids />} />
             <Route path="/orchid/:id" element={<OrchidsDetail />} />
-            <Route path="/film" element={<Film />}></Route>
+            <Route path="/natural" element={<Natural />} />
+            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          <Footer />
         </Router>
       </div>
     </ThemeProvider>
