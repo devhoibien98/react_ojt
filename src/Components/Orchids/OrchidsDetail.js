@@ -104,7 +104,6 @@ const OrchidsDetail = () => {
     }
   };
 
-  // Handle edit
   const handleEdit = async () => {
     try {
       await axios.put(`${BASE_URL}/${id}`, orchid);
@@ -114,7 +113,6 @@ const OrchidsDetail = () => {
     }
   };
 
-  // Loading state
   if (isLoading) {
     return (
       <div className="text-center">
@@ -123,7 +121,6 @@ const OrchidsDetail = () => {
     );
   }
 
-  // Error state
   if (error) {
     return (
       <Alert variant="danger" className="text-center">
@@ -134,7 +131,7 @@ const OrchidsDetail = () => {
 
   return (
     <Card className="h-100">
-      <Card>
+      <Card style={{ borderTopWidth: "0px", borderBottomWidth: "0px" }}>
         <Card.Img
           src={orchid.image}
           alt={orchid.orchidName}

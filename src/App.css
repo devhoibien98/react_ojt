@@ -103,3 +103,23 @@ footer a {
 footer a:hover {
   color: #007bff; /* Màu khi di chuột */
 }
+/* NAVBAR CSS */
+.navbar-brand {
+  font-size: 1.5rem; /* Kích thước chữ cho brand */
+  font-weight: bold; /* Chữ in đậm */
+}
+
+.nav-link {
+  color: black; /* Màu chữ cho các liên kết */
+  margin-right: 15px; /* Khoảng cách giữa các liên kết */
+}
+
+.nav-link:hover {
+  color: blue; /* Màu chữ khi hover */
+}
+
+@media (max-width: 768px) {
+  .nav-link {
+    margin-right: 10px; /* Khoảng cách cho màn hình nhỏ */
+  }
+}
