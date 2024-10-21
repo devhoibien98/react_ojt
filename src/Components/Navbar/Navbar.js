@@ -7,22 +7,25 @@ const NavBar = () => {
   return (
     <Container>
       <Navbar bg="light" data-bs-theme="light" expand="lg">
-        <Navbar.Brand href="/">My App</Navbar.Brand>
+        <Navbar.Brand href="/orchid">Orchid App</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar" />
         <Navbar.Collapse id="basic-navbar">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">
+            <Nav.Link as={Link} to="/orchid">
               Home
             </Nav.Link>
 
-            <Nav.Link as={Link} to="/about">
-              About
-            </Nav.Link>
             <Nav.Link as={Link} to="/natural">
               Natural
             </Nav.Link>
+            <Nav.Link as={Link} to="/about">
+              About
+            </Nav.Link>
             <Nav.Link as={Link} to="/contact">
               Contact
+            </Nav.Link>
+            <Nav.Link as={Link} to="/dashboard">
+              Dashboard
             </Nav.Link>
           </Nav>
           {/* LOGOUT */}

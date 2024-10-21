@@ -10,13 +10,13 @@ export default function Logout() {
     signOut(auth)
       .then(() => {
         localStorage.removeItem("user");
-        navigate("/");
+        navigate("/orchid");
       })
       .catch((error) => {
         console.log(error);
       });
 
-    navigate("/");
+    navigate("/orchid");
   };
   return (
     <div>

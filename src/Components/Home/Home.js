@@ -1,29 +1,40 @@
-import React from "react";
-import { Button, Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Box } from "@mui/material";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import OrchidCard from "../Orchids/OrchidCard";
 
 const Home = () => {
+  const BASE_URL = "https://67072c0ba0e04071d2294b5e.mockapi.io/players";
+  const [orchids, setOrchids] = useState([]); // Sửa từ null thành mảng rỗng
+
+  useEffect(() => {
+    const fetchOrchids = async () => {
+      try {
+        const response = await axios.get(BASE_URL);
+        setOrchids(response.data);
+      } catch (error) {
+        console.error("Error fetching orchids", error);
+      }
+    };
+    fetchOrchids();
+  }, []);
+
   return (
-    <Container className="mt-4">
-      <h1>Welcome to My App</h1>
-      <h3>Explore the following sections:</h3>
-      <ul
-        style={{ listStyle: "none" }}
-        className="d-flex justify-content-around"
+    <div>
+      <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: "repeat(4, 1fr)", // Mỗi hàng có 4 cột
+          gap: 2, // Khoảng cách giữa các thẻ
+          padding: 2, // Padding xung quanh grid
+          alignItems: "stretch", // Đảm bảo các thẻ có chiều cao bằng nhau
+        }}
       >
-        <li>
-          <Link to="/orchid" className="text-decoration-none text-white">
-            <Button
-              variant="primary"
-              type="submit"
-              style={{ marginTop: "20px" }}
-            >
-              Orchid
-            </Button>
-          </Link>
-        </li>
-      </ul>
-    </Container>
+        {orchids.map((orchid) => (
+          <OrchidCard key={orchid.id} orchid={orchid} />
+        ))}
+      </Box>
+    </div>
   );
 };
 

@@ -2,7 +2,6 @@ import { Button } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ModalComponent from "../ModalComponent";
-// import "./AddOrchid.css"; // Import file CSS của bạn
 
 export default function AddOrchid() {
   const BASE_URL = "https://67072c0ba0e04071d2294b5e.mockapi.io/players";

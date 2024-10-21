@@ -8,48 +8,99 @@ const OrchidCard = ({ orchid }) => {
 
   return (
     <Card className="h-100 orchid-card">
-      <Card.Img
-        src={image}
-        alt={orchidName}
+      <div
+        className="card-container"
         style={{
-          height: "250px",
-          width: "100%",
-          objectFit: "cover",
-          objectPosition: "center",
-          maxWidth: "400px",
+          width: "320px",
+          height: "480px",
           margin: "0 auto",
         }}
-      />
-      <Card.Body className="d-flex flex-column">
-        <Card.Title>{orchidName}</Card.Title>
-        <Card.Text>
-          <strong>Category:</strong> {category}
-          <br />
-          <strong>Description:</strong> {description.slice(0, 100)}...
-          <br />
-          <strong>Natural:</strong> {isNatural ? "Yes" : "No"}
-          <br />
-          <strong>Attractive:</strong> {isAttractive ? "Yes" : "No"}
-        </Card.Text>
-        <Link
-          to={`/orchid/${orchid.id}`}
-          className="text-decoration-none text-white text-center mb-3"
+      >
+        <div
+          className="img-container"
+          style={{
+            height: "200px",
+            width: "100%",
+            overflow: "hidden",
+          }}
         >
-          <Button variant="primary" type="submit" style={{ marginTop: "20px" }}>
-            View Orchid
-          </Button>
-        </Link>
-        {isNatural && (
-          <Badge bg="success" className="mb-2 text-center p-2">
-            Natural Orchid
-          </Badge>
-        )}
-        {isAttractive && (
-          <Badge bg="warning" className="mt-2 text-center p-2">
-            Attractive Orchid
-          </Badge>
-        )}
-      </Card.Body>
+          <Card.Img
+            src={image}
+            alt={orchidName}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
+          />
+        </div>
+
+        <Card.Body
+          className="d-flex flex-column"
+          style={{
+            height: "calc(100% - 200px)",
+            padding: "1rem",
+          }}
+        >
+          <div
+            className="content-wrapper"
+            style={{
+              flex: "1 1 auto",
+              overflow: "hidden",
+            }}
+          >
+            <Card.Title className="text-truncate">{orchidName}</Card.Title>
+            <Card.Text
+              style={{
+                fontSize: "0.9rem",
+                marginBottom: "0.5rem",
+              }}
+            >
+              <strong>Category:</strong> {category}
+              <br />
+              <div
+                style={{
+                  display: "-webkit-box",
+                  WebkitLineClamp: "2",
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                }}
+              >
+                <strong>Description:</strong> {description}
+              </div>
+              <strong>Natural:</strong> {isNatural ? "Yes" : "No"}
+              <br />
+              <strong>Attractive:</strong> {isAttractive ? "Yes" : "No"}
+            </Card.Text>
+          </div>
+
+          <div
+            className="button-badge-container"
+            style={{
+              marginTop: "auto",
+              textAlign: "center",
+            }}
+          >
+            <Link to={`/orchid/${orchid.id}`} className="text-decoration-none">
+              <Button variant="primary" className="w-100 mb-2">
+                View Orchid
+              </Button>
+            </Link>
+            {isNatural && (
+              <Badge bg="success" className="d-block mb-2 w-100 py-2">
+                Natural Orchid
+              </Badge>
+            )}
+            {isAttractive && (
+              <Badge bg="warning" className="d-block w-100 py-2">
+                Attractive Orchid
+              </Badge>
+            )}
+          </div>
+        </Card.Body>
+      </div>
     </Card>
   );
 };

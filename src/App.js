@@ -62,8 +62,11 @@ import ThemeToggle from "./Components/Theme/ThemeToggle";
 import Footer from "./Components/Footer/Footer";
 import Natural from "./Natural/Natural";
 import About from "./Components/About/About";
-import Login from "./Components/Login/login";
+
 import PrivateRouter from "./Components/PrivateRouter/PrivateRouter";
+import Login from "./Components/Login/login";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import ManagerOrchid from "./Components/Dashboard/ManagerOrchid";
 
 function App() {
   const [theme, toggleTheme] = UseTheme();
@@ -81,23 +84,8 @@ function App() {
           <NavBar />
           <ThemeToggle toggleTheme={toggleTheme} />
           <Routes>
-            <Route path="/" element={<Login />} />
-            <Route
-              path="/home"
-              element={
-                <PrivateRouter>
-                  <Home />
-                </PrivateRouter>
-              }
-            />
-            <Route
-              path="/orchid"
-              element={
-                <PrivateRouter>
-                  <Orchids />
-                </PrivateRouter>
-              }
-            />
+            <Route path="/login" element={<Login />} />
+            <Route path="/Orchid" element={<Orchids />} />
             <Route
               path="/orchid/:id"
               element={
@@ -111,6 +99,14 @@ function App() {
               element={
                 <PrivateRouter>
                   <Natural />
+                </PrivateRouter>
+              }
+            />
+            <Route
+              path="/dashboard"
+              element={
+                <PrivateRouter>
+                  <ManagerOrchid />
                 </PrivateRouter>
               }
             />
