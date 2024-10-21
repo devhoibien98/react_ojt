@@ -14,23 +14,15 @@ export default function Login() {
   };
 
   return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-      height="100vh"
-      bgcolor="#f5f5f5"
+    <Button
+      variant="contained"
+      onClick={handleGoogleLogin}
+      style={{
+        backgroundColor: "#ff3b30", // Màu nền
+        color: "white", // Màu chữ
+      }}
     >
-      <Button
-        variant="contained"
-        onClick={handleGoogleLogin}
-        style={{
-          backgroundColor: "#ff3b30", // Màu nền
-          color: "white", // Màu chữ
-        }}
-      >
-        Sign In with Google
-      </Button>
-    </Box>
+      Sign In with Google
+    </Button>
   );
 }
