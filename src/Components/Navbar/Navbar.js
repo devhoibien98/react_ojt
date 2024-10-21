@@ -14,6 +14,7 @@ const NavBar = () => {
             <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
+
             <Nav.Link as={Link} to="/about">
               About
             </Nav.Link>
@@ -24,6 +25,7 @@ const NavBar = () => {
               Contact
             </Nav.Link>
           </Nav>
+          {/* LOGOUT */}
           <Nav>
             <Logout />
           </Nav>

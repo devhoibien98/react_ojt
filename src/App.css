@@ -89,37 +89,37 @@
 footer {
   bottom: 0;
   width: 100%;
-  background-color: #f8f9fa; /* Màu nền tùy chỉnh */
+  background-color: #f8f9fa;
   padding: 20px 0;
   text-align: center;
 }
 
 footer a {
-  text-decoration: none; /* Loại bỏ gạch dưới */
-  color: inherit; /* Đổi màu link theo màu chữ mặc định */
-  margin: 0 10px; /* Khoảng cách giữa các link */
+  text-decoration: none;
+  color: inherit;
+  margin: 0 10px;
 }
 
 footer a:hover {
-  color: #007bff; /* Màu khi di chuột */
+  color: #007bff;
 }
 /* NAVBAR CSS */
 .navbar-brand {
-  font-size: 1.5rem; /* Kích thước chữ cho brand */
-  font-weight: bold; /* Chữ in đậm */
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .nav-link {
-  color: black; /* Màu chữ cho các liên kết */
-  margin-right: 15px; /* Khoảng cách giữa các liên kết */
+  color: black;
+  margin-right: 15px;
 }
 
 .nav-link:hover {
-  color: blue; /* Màu chữ khi hover */
+  color: blue;
 }
 
 @media (max-width: 768px) {
   .nav-link {
-    margin-right: 10px; /* Khoảng cách cho màn hình nhỏ */
+    margin-right: 10px;
   }
 }

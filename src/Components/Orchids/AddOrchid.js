@@ -72,15 +72,7 @@ export default function AddOrchid() {
                 setNewOrchid({ ...newOrchid, orchidName: e.target.value })
               }
             />
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Color"
-              value={newOrchid.color}
-              onChange={(e) =>
-                setNewOrchid({ ...newOrchid, color: e.target.value })
-              }
-            />
+
             <textarea
               className="form-control"
               placeholder="Description"

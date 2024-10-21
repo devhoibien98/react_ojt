@@ -114,22 +114,8 @@ function App() {
                 </PrivateRouter>
               }
             />
-            <Route
-              path="/about"
-              element={
-                <PrivateRouter>
-                  <About />
-                </PrivateRouter>
-              }
-            />
-            <Route
-              path="/contact"
-              element={
-                <PrivateRouter>
-                  <Contact />
-                </PrivateRouter>
-              }
-            />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
         </Router>
