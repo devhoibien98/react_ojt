@@ -83,6 +83,16 @@ const AddOrchid = ({ open, handleClose, refreshOrchids }) => {
             }
             label="Is Natural"
           />
+          <FormControlLabel
+            control={
+              <Switch
+                checked={orchidData.isAttractive}
+                onChange={handleChange}
+                name="isAttractive"
+              />
+            }
+            label="Is Attractive"
+          />
         </form>
       </DialogContent>
       <DialogActions>

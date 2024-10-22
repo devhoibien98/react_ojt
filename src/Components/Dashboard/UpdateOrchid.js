@@ -24,6 +24,7 @@ const UpdateOrchid = ({ open, handleClose, orchid, refreshOrchids }) => {
         orchidName: orchid.orchidName,
         description: orchid.description,
         isNatural: orchid.isNatural,
+        isAttractive: orchid.isAttractive,
       });
     }
   }, [orchid]);
@@ -94,6 +95,17 @@ const UpdateOrchid = ({ open, handleClose, orchid, refreshOrchids }) => {
             />
           }
           label="Is Natural"
+        />
+        <FormControlLabel
+          control={
+            <Switch
+              checked={orchidData.isAttractive}
+              onChange={(e) =>
+                setOrchidData({ ...orchidData, isAttractive: e.target.checked })
+              }
+            />
+          }
+          label="Is Attractive"
         />
         <Button
           variant="contained"

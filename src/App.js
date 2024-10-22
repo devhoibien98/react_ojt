@@ -84,8 +84,8 @@ function App() {
           <NavBar />
           <ThemeToggle toggleTheme={toggleTheme} />
           <Routes>
-            <Route path="/login" element={<Login />} />
-            <Route path="/Orchid" element={<Orchids />} />
+            <Route path="/" element={<Login />} />
+            <Route path="/orchid" element={<Orchids />} />
             <Route
               path="/orchid/:id"
               element={

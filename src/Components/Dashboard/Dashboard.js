@@ -72,6 +72,9 @@ const Dashboard = ({ orchids, refreshOrchids }) => {
                 Is Natural
               </TableCell>
               <TableCell sx={{ fontSize: "1.2rem", fontWeight: "bold" }}>
+                Is Attractive
+              </TableCell>
+              <TableCell sx={{ fontSize: "1.2rem", fontWeight: "bold" }}>
                 Actions
               </TableCell>
             </TableRow>
@@ -95,6 +98,9 @@ const Dashboard = ({ orchids, refreshOrchids }) => {
                 </TableCell>
                 <TableCell sx={{ fontSize: "1rem" }}>
                   {orchid.isNatural ? "Yes" : "No"}
+                </TableCell>
+                <TableCell sx={{ fontSize: "1rem" }}>
+                  {orchid.isAttractive ? "Yes" : "No"}
                 </TableCell>
                 <TableCell>
                   <IconButton

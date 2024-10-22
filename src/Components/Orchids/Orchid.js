@@ -32,7 +32,7 @@ const Orchids = () => {
 
   return (
     <Container fluid>
-      <Login />
+      {/* <Login /> */}
       <Row xs={1} sm={2} md={3} lg={4} className="g-4 pt-5">
         {isLoading && <CircularProgress className="mx-auto" />}
         {error && (
