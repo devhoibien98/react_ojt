@@ -8,6 +8,10 @@ import {
   TextField,
   Switch,
   FormControlLabel,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
 } from "@mui/material";
 import axios from "axios";
 
@@ -17,6 +21,8 @@ const AddOrchid = ({ open, handleClose, refreshOrchids }) => {
     orchidName: "",
     description: "",
     isNatural: false,
+    isAttractive: false,
+    category: "",
   });
 
   const handleChange = (e) => {
@@ -93,6 +99,18 @@ const AddOrchid = ({ open, handleClose, refreshOrchids }) => {
             }
             label="Is Attractive"
           />
+          <FormControl fullWidth margin="normal" required>
+            <InputLabel>Category</InputLabel>
+            <Select
+              name="category"
+              value={orchidData.category}
+              onChange={handleChange}
+            >
+              <MenuItem value="Dendrobium">Dendrobium</MenuItem>
+              <MenuItem value="Brassavola">Brassavola</MenuItem>
+              <MenuItem value="Cattleya">Cattleya</MenuItem>
+            </Select>
+          </FormControl>
         </form>
       </DialogContent>
       <DialogActions>

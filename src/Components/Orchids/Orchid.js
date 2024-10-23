@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Badge } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { Alert, CircularProgress } from "@mui/material";
 import OrchidCard from "./OrchidCard";
 import Login from "../Login/login";

@@ -6,6 +6,10 @@ import {
   Button,
   Switch,
   FormControlLabel,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
 } from "@mui/material";
 import axios from "axios";
 
@@ -15,6 +19,8 @@ const UpdateOrchid = ({ open, handleClose, orchid, refreshOrchids }) => {
     orchidName: "",
     description: "",
     isNatural: false,
+    isAttractive: false,
+    category: "",
   });
 
   useEffect(() => {
@@ -25,6 +31,7 @@ const UpdateOrchid = ({ open, handleClose, orchid, refreshOrchids }) => {
         description: orchid.description,
         isNatural: orchid.isNatural,
         isAttractive: orchid.isAttractive,
+        category: orchid.category || "",
       });
     }
   }, [orchid]);
@@ -85,6 +92,19 @@ const UpdateOrchid = ({ open, handleClose, orchid, refreshOrchids }) => {
           }
           sx={{ marginBottom: 2 }}
         />
+        <FormControl fullWidth sx={{ marginBottom: 2 }}>
+          <InputLabel>Category</InputLabel>
+          <Select
+            value={orchidData.category}
+            onChange={(e) =>
+              setOrchidData({ ...orchidData, category: e.target.value })
+            }
+          >
+            <MenuItem value="Dendrobium">Dendrobium</MenuItem>
+            <MenuItem value="Brassavola">Brassavola</MenuItem>
+            <MenuItem value="Cattleya">Cattleya</MenuItem>
+          </Select>
+        </FormControl>
         <FormControlLabel
           control={
             <Switch
@@ -112,6 +132,7 @@ const UpdateOrchid = ({ open, handleClose, orchid, refreshOrchids }) => {
           color="primary"
           onClick={handleUpdate}
           fullWidth
+          sx={{ marginTop: 2 }}
         >
           Update
         </Button>

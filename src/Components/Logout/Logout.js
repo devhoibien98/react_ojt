@@ -10,7 +10,7 @@ export default function Logout() {
     signOut(auth)
       .then(() => {
         localStorage.removeItem("user");
-        navigate("/orchid");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);

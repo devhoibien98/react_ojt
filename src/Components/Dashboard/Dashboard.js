@@ -75,6 +75,9 @@ const Dashboard = ({ orchids, refreshOrchids }) => {
                 Is Attractive
               </TableCell>
               <TableCell sx={{ fontSize: "1.2rem", fontWeight: "bold" }}>
+                Category
+              </TableCell>
+              <TableCell sx={{ fontSize: "1.2rem", fontWeight: "bold" }}>
                 Actions
               </TableCell>
             </TableRow>
@@ -101,6 +104,9 @@ const Dashboard = ({ orchids, refreshOrchids }) => {
                 </TableCell>
                 <TableCell sx={{ fontSize: "1rem" }}>
                   {orchid.isAttractive ? "Yes" : "No"}
+                </TableCell>
+                <TableCell sx={{ fontSize: "1rem" }}>
+                  {orchid.category}
                 </TableCell>
                 <TableCell>
                   <IconButton
