@@ -37,14 +37,7 @@ function App() {
             <Route path="/" element={<Orchids />} />
 
             <Route path="/orchid/:id" element={<OrchidsDetail />} />
-            <Route
-              path="/natural"
-              element={
-                <PrivateRouter>
-                  <Natural />
-                </PrivateRouter>
-              }
-            />
+            <Route path="/natural" element={<Natural />} />
             <Route
               path="/dashboard"
               element={

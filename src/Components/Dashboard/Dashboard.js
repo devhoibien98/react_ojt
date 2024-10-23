@@ -14,6 +14,8 @@ import EditIcon from "@mui/icons-material/Edit";
 import axios from "axios";
 import UpdateOrchid from "./UpdateOrchid";
 import AddOrchid from "./AddOrchid";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Dashboard = ({ orchids, refreshOrchids }) => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -23,6 +25,7 @@ const Dashboard = ({ orchids, refreshOrchids }) => {
   const handleAddOrchid = () => {
     setModalOpen(false);
     refreshOrchids();
+    toast.success("Orchid added successfully!");
   };
 
   const handleUpdateOrchid = (orchid) => {
@@ -38,9 +41,10 @@ const Dashboard = ({ orchids, refreshOrchids }) => {
         `https://67072c0ba0e04071d2294b5e.mockapi.io/players/${id}`
       );
       refreshOrchids();
+      toast.success("Orchid deleted successfully!");
     } catch (error) {
       console.error("Error deleting orchid:", error);
-      alert("Failed to delete orchid.");
+      toast.error("Failed to delete orchid.");
     }
   };
 
@@ -143,8 +147,14 @@ const Dashboard = ({ orchids, refreshOrchids }) => {
         open={updateModalOpen}
         handleClose={() => setUpdateModalOpen(false)}
         orchid={selectedOrchid}
-        refreshOrchids={refreshOrchids}
+        refreshOrchids={() => {
+          refreshOrchids();
+          toast.success("Orchid updated successfully!");
+        }}
       />
+
+      {/* Toast Container */}
+      <ToastContainer />
     </div>
   );
 };
