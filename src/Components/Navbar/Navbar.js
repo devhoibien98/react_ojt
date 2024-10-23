@@ -12,18 +12,18 @@ const NavBar = () => {
   const handleGoogleLogin = () => {
     signInWithGoogle().then((user) => {
       localStorage.setItem("user", "user");
-      navigate("/orchid");
+      navigate("/");
     });
   };
 
   return (
     <Container>
       <Navbar bg="light" data-bs-theme="light" expand="lg">
-        <Navbar.Brand href="/orchid">Orchid App</Navbar.Brand>
+        <Navbar.Brand href="/">Orchid App</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar" />
         <Navbar.Collapse id="basic-navbar">
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/orchid">
+            <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
             <Nav.Link as={Link} to="/natural">

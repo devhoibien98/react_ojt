@@ -74,7 +74,7 @@ const OrchidsDetail = () => {
           </Card.Body>
         </Card>
 
-        <Link to="/orchid" className="text-decoration-none text-white mb-2">
+        <Link to="/" className="text-decoration-none text-white mb-2">
           <Button variant="primary" type="button" style={{ marginTop: "20px" }}>
             Back
           </Button>
